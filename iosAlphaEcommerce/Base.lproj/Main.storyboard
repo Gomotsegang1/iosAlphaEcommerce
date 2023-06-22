@@ -12,7 +12,7 @@
         <array key="Kodchasan-Bold.ttf">
             <string>Kodchasan-Bold</string>
         </array>
-        <array key="ostrich-sans-medium.ttf">
+        <array key="ostrich-sans-medium.otf">
             <string>OstrichSans-Medium</string>
         </array>
     </customFonts>
@@ -501,8 +501,17 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addToCartButton:" destination="txN-zz-uYu" eventType="touchUpInside" id="hXB-TR-CUe"/>
-                                    <action selector="addToCartButton:" destination="Fu0-FK-EAt" eventType="touchUpInside" id="sBo-jZ-QBc"/>
+                                    <action selector="btnCartAdd:" destination="txN-zz-uYu" eventType="touchUpInside" id="miS-kC-l1A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdQ-Gt-R7I">
+                                <rect key="frame" x="323" y="90" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cart.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="btnViewCart:" destination="txN-zz-uYu" eventType="touchUpInside" id="ej6-Ez-TMf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -536,25 +545,87 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysZ-ez-6HL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Fu0-FK-EAt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7774.8091603053435" y="429.57746478873241"/>
+            <point key="canvasLocation" x="2976" y="873"/>
         </scene>
         <!--Cart-->
         <scene sceneID="c6z-Eb-GlR">
             <objects>
-                <viewController id="tnc-Mq-6vr" sceneMemberID="viewController">
+                <viewController title="Cart" id="tnc-Mq-6vr" customClass="CartViewController" customModule="iosAlphaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yfk-yJ-Ehh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="veo-hj-pAM">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CartTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartTableViewCell" rowHeight="200" id="LhC-Es-3ci" customClass="CartTableViewCell" customModule="iosAlphaEcommerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LhC-Es-3ci" id="R93-H6-Lfd">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-5k-hYJ">
+                                                    <rect key="frame" x="20" y="11" width="128" height="154"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLr-AH-jLj">
+                                                    <rect key="frame" x="175" y="78" width="99" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLk-yJ-Dzm">
+                                                    <rect key="frame" x="175" y="37" width="105" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="productQuantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhr-Wc-POp">
+                                                    <rect key="frame" x="175" y="118" width="125" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cartImage" destination="fzy-5k-hYJ" id="KhD-1w-buR"/>
+                                            <outlet property="lblCProductName" destination="BLk-yJ-Dzm" id="R4J-10-hyP"/>
+                                            <outlet property="lblCProductPrice" destination="MLr-AH-jLj" id="1BX-7l-rgC"/>
+                                            <outlet property="lblCProductQuantity" destination="yhr-Wc-POp" id="ru6-sO-gJl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tnc-Mq-6vr" id="LUh-fo-6sm"/>
+                                    <outlet property="delegate" destination="tnc-Mq-6vr" id="5Zd-hI-bg9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mRx-i1-tZM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mRx-i1-tZM" firstAttribute="trailing" secondItem="veo-hj-pAM" secondAttribute="trailing" id="Kee-Qz-vnN"/>
+                            <constraint firstItem="mRx-i1-tZM" firstAttribute="bottom" secondItem="veo-hj-pAM" secondAttribute="bottom" id="bSu-1K-1LD"/>
+                            <constraint firstItem="veo-hj-pAM" firstAttribute="top" secondItem="mRx-i1-tZM" secondAttribute="top" id="oAZ-rk-KV0"/>
+                            <constraint firstItem="veo-hj-pAM" firstAttribute="leading" secondItem="mRx-i1-tZM" secondAttribute="leading" id="vIJ-yP-7KV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" selectedImage="cart.fill" id="6OR-vW-ber"/>
+                    <connections>
+                        <outlet property="cartTabItem" destination="6OR-vW-ber" id="87n-MZ-nxv"/>
+                        <outlet property="tableView" destination="veo-hj-pAM" id="zui-k0-Oih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8K-Iy-k3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="873"/>
+            <point key="canvasLocation" x="1936.6412213740457" y="872.53521126760563"/>
         </scene>
         <!--MEN-->
         <scene sceneID="AzB-xO-Q35">
@@ -762,10 +833,10 @@
             </objects>
             <point key="canvasLocation" x="7774.8091603053435" y="-439.43661971830988"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="deq-mg-X4P">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IUw-gE-da9" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IUw-gE-da9" customClass="CustomTabBarController" customModule="iosAlphaEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" style="editor" id="s6a-b2-CzF"/>
                     <nil key="simulatedTopBarMetrics"/>

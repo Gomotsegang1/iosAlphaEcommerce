@@ -25,6 +25,10 @@
 		4BFAE7A92A41B6B300750AC3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAE7A82A41B6B300750AC3 /* RegisterViewController.swift */; };
 		4BFAE7AB2A41B6C000750AC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAE7AA2A41B6C000750AC3 /* LoginViewController.swift */; };
 		7030115C2A3257D100CAD1DA /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030115B2A3257D100CAD1DA /* Products.swift */; };
+		8DDD4C422A4422B80014235F /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD4C412A4422B80014235F /* CartTableViewCell.swift */; };
+		8DDD4C452A442ABD0014235F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD4C432A442ABD0014235F /* CoreDataModel.xcdatamodeld */; };
+		8DE811DF2A4338AF009F3C9A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE811DE2A4338AF009F3C9A /* CustomTabBarController.swift */; };
+		8DE811E12A433BF1009F3C9A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE811E02A433BF1009F3C9A /* CartViewController.swift */; };
 		ABAC185D2A31D98B00B92BBA /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC185C2A31D98B00B92BBA /* SingleViewController.swift */; };
 		ABAE1B222A4306DF003EA994 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE1B212A4306DF003EA994 /* DeliveryViewController.swift */; };
 		ABAE1B242A4307CA003EA994 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE1B232A4307CA003EA994 /* PaymentViewController.swift */; };
@@ -65,6 +69,10 @@
 		4BFAE7A82A41B6B300750AC3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4BFAE7AA2A41B6C000750AC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7030115B2A3257D100CAD1DA /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		8DDD4C412A4422B80014235F /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		8DDD4C442A442ABD0014235F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		8DE811DE2A4338AF009F3C9A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		8DE811E02A433BF1009F3C9A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		ABAC185C2A31D98B00B92BBA /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		ABAE1B212A4306DF003EA994 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		ABAE1B232A4307CA003EA994 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 		AD3EB2FF2A31B19F00D2A24F = {
 			isa = PBXGroup;
 			children = (
+				8DDD4C432A442ABD0014235F /* CoreDataModel.xcdatamodeld */,
 				AD3EB30A2A31B19F00D2A24F /* iosAlphaEcommerce */,
 				AD3EB3092A31B19F00D2A24F /* Products */,
 			);
@@ -196,6 +205,9 @@
 				AD5E40EC2A3213A20079A9F7 /* Item1.swift */,
 				7030115B2A3257D100CAD1DA /* Products.swift */,
 				ABAE1B252A43080D003EA994 /* Users.swift */,
+				8DE811DE2A4338AF009F3C9A /* CustomTabBarController.swift */,
+				8DE811E02A433BF1009F3C9A /* CartViewController.swift */,
+				8DDD4C412A4422B80014235F /* CartTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,15 +305,19 @@
 				4BB259872A42D4B0009A981C /* WebService.swift in Sources */,
 				CB3A26B62A31E46100A92405 /* MenCollectionViewCell.swift in Sources */,
 				4BFAE7A92A41B6B300750AC3 /* RegisterViewController.swift in Sources */,
+				8DE811DF2A4338AF009F3C9A /* CustomTabBarController.swift in Sources */,
 				AD2742AE2A321DE300053A89 /* womenCollectionViewCell.swift in Sources */,
 				AD5E40ED2A3213A20079A9F7 /* Item1.swift in Sources */,
 				ABAE1B282A430871003EA994 /* ConfirmViewController.swift in Sources */,
 				ABAE1B2A2A430AAA003EA994 /* AddressViewController.swift in Sources */,
 				ABAE1B262A43080D003EA994 /* Users.swift in Sources */,
+				8DDD4C452A442ABD0014235F /* CoreDataModel.xcdatamodeld in Sources */,
 				AD3EB3102A31B19F00D2A24F /* ViewController.swift in Sources */,
+				8DDD4C422A4422B80014235F /* CartTableViewCell.swift in Sources */,
 				AD3EB30C2A31B19F00D2A24F /* AppDelegate.swift in Sources */,
 				CB3A26B42A31D0B800A92405 /* menViewController.swift in Sources */,
 				ABAC185D2A31D98B00B92BBA /* SingleViewController.swift in Sources */,
+				8DE811E12A433BF1009F3C9A /* CartViewController.swift in Sources */,
 				AD3EB30E2A31B19F00D2A24F /* SceneDelegate.swift in Sources */,
 				4BFAE7AB2A41B6C000750AC3 /* LoginViewController.swift in Sources */,
 				AD3EB3202A31D17B00D2A24F /* womenViewController.swift in Sources */,
@@ -520,6 +536,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8DDD4C432A442ABD0014235F /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8DDD4C442A442ABD0014235F /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 8DDD4C442A442ABD0014235F /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AD3EB3002A31B19F00D2A24F /* Project object */;
 }
